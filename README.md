@@ -15,7 +15,7 @@ The required functionalities when designing the circuit are;
 
 We used PIC16F877A as the controller. Besides of the controller, we used a 4-digit 7-segment display to display temperature values / threshold values on 3 digits and the unit (Celcius or Fahrenheit) on one digit. Segments (A, B, C, D, E, F, G and DP) are connected to RD pins (0 to 7), digits are connected to the RC pins (0 to 3) and then they configured as output pins via the code. RA pins are configured as input pins and input components are connected to the RA part. We used LM35 as an analog thermometer sensor and connected it to the RA0 pin (which is an analog pin); we used two buttons to provide 4 different display options on 4-digit seven-segment display and connected them to the RA1 and RA2 pins; we used two potentiometers (4k ohm) to be able to determine two different threshold values and connected them to RA3 and RA5 pins. Lastly, a LED is connected to the RC4 pin as a visual indicator which will be used when the temperature value is not between threshold values.
 
-![alt text](https://github.com/yusuftengriverdi/thermometer-with-PIC16/blob/main/Circuit.png?raw=true)
+
 
 TEMPERATURE
 
@@ -69,3 +69,5 @@ REFERENCES
 [2] https://www.researchgate.net/post/How_do_you_convert_an_ADC_digitized_ numeric_value_0255_for_8_bit_to_a_voltage 
 [3] https://en.wikipedia.org/wiki/Fahrenheit
 All the other figures are taken as screenshots or done by hand. The code is our own inspired by lecture notes.
+
+![alt text](https://github.com/yusuftengriverdi/thermometer-with-PIC16/blob/main/Circuit.png?raw=true)
