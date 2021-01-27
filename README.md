@@ -66,7 +66,9 @@ Then, in the interrupt we seperated all conditions into four different if condit
 ### REFERENCES 
 
 [1] https://www.ti.com/document-viewer/LM35/datasheet/revisionhistory#SNIS1593436  
+
 [2] https://www.researchgate.net/post/How_do_you_convert_an_ADC_digitized_ numeric_value_0255_for_8_bit_to_a_voltage 
+
 [3] https://en.wikipedia.org/wiki/Fahrenheit
 All the other figures are taken as screenshots or done by hand. The code is our own inspired by lecture notes.
 
