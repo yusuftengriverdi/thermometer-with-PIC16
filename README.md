@@ -1,5 +1,8 @@
 # thermometer-with-PIC16
 
+Developers: Berkay Pala
+            Yusuf Tanrıverdi
+            
 The project is consists designing a thermometer which has different functionalities that required to be satisfied. We intended to design the circuit on circuit design program, Proteus and first component that we placed is the microcontroller, PIC16F877A.  It has 30 pins; two of them oscillator pins, one of them input voltage pin and other 27 pins can be used as I/O pins with different tasks. One of the significant part of the microcontroller that it is programmable. With deploying a hex extensioned file into the controller, it is possible to configure its pins and perform various operations. We wrote our code in C language on MikroC Pro IDE and then converted into the hex file to deploy it into controller.
 The required functionalities when designing the circuit are; 
 
