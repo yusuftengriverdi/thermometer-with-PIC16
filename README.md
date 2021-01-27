@@ -1,4 +1,4 @@
-# thermometer-with-PIC16
+# THERMOMETER WITH PIC-16
 
 Developers: Berkay Pala, Yusuf Tanrıverdi
             
@@ -17,7 +17,7 @@ We used PIC16F877A as the controller. Besides of the controller, we used a 4-dig
 
 
 
-TEMPERATURE
+## TEMPERATURE
 
 To read temperature from real-world analogically, LM35 thermometer is used. The LM35 series are integrated-circuit analog thermometers with an analog output voltage linearly-proportional to Centigrade temperature. The value +Vs is the reference voltage and is adjusted to 5 Volt in project. Vout is connected to PORTA’s first pin of PIC16, called A/N converter RA0 pin.  An simple LM35 usage as Centigrade thermometer can be seen on its datasheet[1], where it is connected ground directly and output voltage is seen as  Centigrade per 10.0 mV. 
  
@@ -38,13 +38,13 @@ This is done by convertCtoF function defined in the code. We, however, did not a
 
 To change unit displayed on 7-segment displays, we apply the logic of that with two buttons one has four statements, i.e. 00, 01, 11,10. The first two statements are used to change unit of temperature value, from Celcius to Fahrenheit defaultly. That means, 00 is default and assigns unit_flag variable to 0. 
 
-Threshold 
+## THRESHOLD 
 Setting a threshold interval for an analog value is important for alerts and can provide safety for cases such as excess humidity, pressure, motion and -in this application- temperature rate.  Threshold values are determined via potentiometers and can be displayed on 7-segment displays if button 1 is pressed. Potentiometers are adjustable resistors that can change the potential difference across of them, providing a change in input. To set that values, we set two potentiometers circuits with maximum 4k resistance value: one for low_value and one for high_value. Voltage values are continuosly (i.e. inside infitine loop in the main) read from  RA3 / AN3 and RA5/AN4 pins of PIC16. They are multiplied by 10 to convert centigrad values and then stored as TH1 and TH2 variables. By their order, they are assigned to low and high values. To convert from analog to digital, same procedure that is discussed previous section is applied.  
 
 
 Whether temperature value read is in between low and high thresholds is checked in thresholding() function. In case of alert, i.e the heat being either excessive or scant, led will be glowed.  This function is operated as an interrupt to provide continous checking. 
 
-Display 
+## DISPLAY 
 
 As it was stated before, we are using 4-digit 7-segment display, 7SEG-MPX4-CC, to display temperature values, threshold values and unit. After calculating temperature and threshold values, there is a function to divide each digit of the values to store them as a seperate digit to display them in the first three digits of the 7SEG-MPX4-CC. This function thousands digit as a3, hundreds digit as a2 and tens digit as a3.  
  
